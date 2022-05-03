@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CertificateController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,5 +25,11 @@ Route::get('/dashboard', function () {
 Route::get('/add-certificate', function () {
     return view('add-certificate');
 })->middleware(['auth'])->name('add-certificate');
+
+Route::get('/certificate_details', function () {
+    return view('certificate_details');
+})->middleware(['auth'])->name('certificate_details');
+
+route::post('certificate', [CertificateController::class, 'store'])->middleware(['auth']);
 
 require __DIR__.'/auth.php';

@@ -47,23 +47,55 @@
                 <!-- Breadcrumb-->
 
                 <!-- End Breadcrumb-->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header text-uppercase">Text Input</div>
-                            <div class="card-body">
-                                <div class="row mt-3">
+                <form action="{{ url('certificate') }}" method="POST" >
+                    @csrf
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header text-uppercase">Text Input</div>
+                                <div class="card-body">
+                                    <div class="row mt-3">
 
-                                    <div class="col-md-4">
-                                        <label>WITH HELPER TEXT</label>
-                                        <input type="text" class="form-control" placeholder="Enter Email Address">
+                                        <div class="col-md-4">
+                                            <input name="user_id" type="hidden" value="{{ Auth::user()->id }}">
+                                            <label>Enter Course Name</label>
+                                            <input type="text" class="form-control" placeholder="Enter Course Name"
+                                                name="Course_name" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Enter DoS Number</label>
+                                            <input type="text" class="form-control" placeholder="Enter DoS Number"
+                                                name="DoS_number" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Enter Certificate Number</label>
+                                            <input type="text" class="form-control"
+                                                placeholder="Enter Certificate Number" name="Certificate_number">
+                                        </div>
+
                                     </div>
-                                    
+
+                                    <div class="row mt-3">
+
+                                        <div class="col-md-4">
+                                            <label>Enter Date of Issue</label>
+                                            <input type="date" class="form-control" placeholder="Enter Date of Issue"
+                                                name="Date_of_issue" required>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label>Enter Date of Expire</label>
+                                            <input type="date" class="form-control" placeholder="Enter Date of Expire"
+                                                name="Date_of_expire" required>
+                                        </div>
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
                 <!--End Row-->
 
                 {{-- <div class="row">

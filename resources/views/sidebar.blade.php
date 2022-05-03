@@ -24,8 +24,8 @@
             </a>
             <ul class="sidebar-submenu">
                 <li><a href="{{ url('add-certificate') }}"><i class="fa fa-book"></i> Add Certificate</a></li>
-                {{-- <li><a href="ui-buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-                <li><a href="ui-cards.html"><i class="fa fa-circle-o"></i> Cards</a></li>
+                <li><a href="{{ url('certificate_details') }}"><i class="fa fa-book"></i> Certificate Details</a></li>
+                {{-- <li><a href="ui-cards.html"><i class="fa fa-circle-o"></i> Cards</a></li>
                 <li><a href="ui-checkbox-radio.html"><i class="fa fa-circle-o"></i> Checkboxes & Radios</a></li>
                 <li><a href="ui-tabs-accordions.html"><i class="fa fa-circle-o"></i> Tabs & Accordions</a></li>
                 <li><a href="ui-modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
